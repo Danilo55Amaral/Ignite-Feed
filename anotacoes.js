@@ -72,6 +72,11 @@
         fazem conexão com o  servidor do google para carregar as fontes , e fazendo dessa forma gera mais 
         otimização. 
 
+                                    COMPONENTE HEADER 
+
+        Nese modulo foi estilizado o componente Header e também foi inserido a imagem da logo a partir do 
+        figma.
+
 
 
 
