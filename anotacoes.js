@@ -60,6 +60,18 @@
         que for estilizada ele gera dentro do Browser calsses com numeros e letras aleatórios e unicos para 
         cada estilização. 
 
+                                        CSS GLOBAL
+
+        É importante criar um arquivo para estilização global de nossa aplicação e essa estilização 
+        reflete em todas as páginas.
+
+        Esse arquivo eu chamo de global.css 
+
+        PS - Na hora de importar a font do google fonts é importante pegar as tags de links do preconnect  e 
+        colocar em cima para as primeiras coisas que vão ser carregadas, isso por que essas tags de links 
+        fazem conexão com o  servidor do google para carregar as fontes , e fazendo dessa forma gera mais 
+        otimização. 
+
 
 
 
