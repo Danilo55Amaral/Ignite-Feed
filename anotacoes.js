@@ -25,5 +25,46 @@
             )
         }
 
+                
+        
+                        CSS MODULES e COMPONENTE HEADER (Scoped CSS)
+
+        O escopo devemos atrelar ao componente scoped Css (Css escopado) da para escopar o css apenas a 
+        um componente especifico e com isso evitar alguns problemas.
+
+        Utilizamos uma tecnica chamada Css modules e podemos ver a documentação disso ou até na propria 
+        documentação do Vite também.
+        
+        PS- é importante sempre criar o componente iniciando com a letra maiuscula para não ser
+        confudido com elementos html.
+
+        Para que meu arquivo css fique atrelado apenas ao meu componente especifico e não interfira em outros 
+        componentes eu devo utilizar o .module quando for criar o arquivo css.
+
+        Ps- Uma boa dica é utilizar apenas classes no css, evitar usar outros seletores como id . 
+
+        PS - No react não utilizamos class no html isso por que estamos dentro de um arquivo JS e existe 
+        a class do JavaScript, para o React não confundir foi adotada a className.
+
+        Na hora de importar os arquivos css dentro do componente quando eu estou utilizando o module 
+        eu preciso também informar o nome do arquivo na importação igual na importação de componentes.
+
+            import styles from "./Header.module.css";
+
+        E para passar essa estilização eu vou utilizar {} pois ele gera uma variavel JavaScript. 
+
+            <strong className={styles.header}>Ignite Feed</strong>   
+
+        PS- No css module dá para evitar que e estilização de um componente afete outro componente 
+        com isso não temos interferencia de estilos dentro da aplicação, o css modules gera para cada classe
+        que for estilizada ele gera dentro do Browser calsses com numeros e letras aleatórios e unicos para 
+        cada estilização. 
+
+
+
+
+
+
+
         
 */ 
