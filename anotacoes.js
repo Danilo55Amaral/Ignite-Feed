@@ -87,6 +87,17 @@
         Para instalar eu rodo o comando npm i phosphor-react 
         Após isso eu posso importar os icones e utilizar. 
 
+                                    COMPONENTE POST 
+
+        PS - quando estamos nos referindo a data ou tempo existe uma tag especifica para isso no html que é 
+        a tag time , essa tag possue um atributo chamado dateTime e posso colocar a data em que o post foi 
+        publicado, e também utilizei a propriedade title informando a data da publicação , com isso quando 
+        o usuario colocar o mause em cime ele mostra a data da publicação.
+
+        Ps- Uma das coisas que no React muda quando utilizamos elementos do html é que nos atributos devemos 
+        colocar em formato cameocase que é a primeira letra maiuscula nas palavras seguintes ex dataTime , se 
+        fosse apenas no html seria datatime.
+
 
 
 
