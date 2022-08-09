@@ -78,6 +78,17 @@
         figma.
 
 
+                                    COMPONENTE SIDEBAR 
+
+        Nesse modulo construimos a sidebar e foi feito a divisção da tela.
+        Eu criei também um App.module.css para estilizar essa página.
+
+        Nesse projeto foi utilizado icons da https://phosphoricons.com/
+        Para instalar eu rodo o comando npm i phosphor-react 
+        Após isso eu posso importar os icones e utilizar. 
+
+
+
 
 
 
