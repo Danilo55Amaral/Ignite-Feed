@@ -98,6 +98,12 @@
         colocar em formato cameocase que é a primeira letra maiuscula nas palavras seguintes ex dataTime , se 
         fosse apenas no html seria datatime.
 
+                                    ESTILIZAÇÕES DO POST 
+                    
+        Apenas estilizando o componente.
+
+        
+
 
 
 
