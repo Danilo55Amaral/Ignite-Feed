@@ -108,12 +108,43 @@
 
                                     COMPONENTE COMMENT
 
+        Apenas estilizando o componente.
 
+                                    COMPONENTE AVATAR  ( Revisando : Props)
 
+        No react existem dois momentos em que criamos um componente , um momento é quando alguma 
+        coisa repete muito em tela,  outro ponto é quando se consegue tirar algo de um componente 
+        maior sem que o componente maior pare de funcionar. 
+        Ou seja esses dois momentos são primeiro quando algo se repete muito ou se repete, e segundo
+        é quando conseguimos desacoplar um pedaço da logica, estrutura, visual de algum componente 
+        para outro componente menor. 
 
+        Foi criado um componente Avatar e definir através de props o src para passar essa propriedade
+        dentro do componente em que eu estiver usando o componente Avatar.
+        
+        Com isso aprendemos que sempre que quisermos que o componente tenha alguma elemento visual
+        diferente de acordo com onde ele é aplicado podemos utilizar props. 
 
+        As props(Propriedades) são a maneira em que os componentes se comunicam e através delas 
+        podemos remover ou adicionar propriedades.
 
+        No exemplo aqui eu criei uma propriedade exclusiva para meu componente de comentario 
+        a hasBorder e depois criei duas estilizações diferentes e coloquei uma condição dentro 
+        do meu ClassName se as minhas propriedades contém hasBorder eu mostro styles.avatarWithBorder senão 
+        eu mostro o styles.avatar.
 
+        Isso mostra o um pouco do poder das props.
+
+        Mas isso vai fazer a borda ser removida em todos os componentes , por que eu preciso criar uma 
+        conastante dentro do meu componente Avatar para que quando a propriedade hasBorder for diferente de false 
+        quer dizer que ele tem borda.
+
+        Eu posso melhorar esse código utilizando o conceito de desestruturação do JavaScript eu 
+        posso usar desestruturação nas minhas propriedades REact  
+                ({ hasBorder = true, src})  
+
+        Com isso eu consigo passar valores padrão para propriedades no meu componente. 
+        Com isso eu tbm não preciso mais criar uma const 
 
         
 */ 
