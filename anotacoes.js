@@ -146,5 +146,50 @@
         Com isso eu consigo passar valores padrão para propriedades no meu componente. 
         Com isso eu tbm não preciso mais criar uma const 
 
+                                        
+                                            OS MOTORES DO REACT
+                                            
+                                    ITERANDO NO JSX 
+
+        Primeiramente organizei as informações de meu componente Post, eu preciso das  informações 
+        author: { avatar_url: "", name: "", role: "" }
+        publishedAt: Date     (data de publicação)
+        content: String
+
+        Dentro do  meu componente App.tsx eu criei um array de posts de é um array de objetos, onde eu vou passar
+        os dados. 
+
+        PS- Uma coisa bem importante é evitar a todo custo que o back end retorne dados html isso  por que se o 
+        back end está retornando html e esse html é mostrado em tela, fica mais fácil de deixar o site aberto a 
+        vulnerabilidade, algum usuario mau intensionado pode tentar jogar algum tag script e isso abre uma brecha 
+        por que outro usuario consegue executar scripts.
+
+        É importante trabalhar com conteudo bruto sem html e se utilizar algumas estruturas de formatação, nesse projeto 
+        foi colocado cada linha do conteudo do post como sendo uma posição no array.
+
+                ITERAÇAO 
+            Dentro da programação é repetir alguma coisa, criar uma estrutura de repetição exemplo 
+            se vamos iterar um array vamos percorrer esse array e fazer algumas coisa. 
+            Sempre que for se fazer alguma iteração dentro do jsx se utiliza o map por que ele 
+            vai percorrer o array e vai retornar algumas coisa.
+
+            Na aplicação eu utilizei um map que percorre meu array post e retorna isso no meu 
+            componente Post.
+
+            Em seguida eu passei as propriedades dentro do meu Post que está sendo retornado.
+
+                    {posts.map(post => {
+                        return (
+                            <Post 
+                            author={post.author}
+                            content={post.content}
+                            publishedAt={post.publishedAt}
+                            />
+                        )
+                        })}
+
+            PS- dentro de Post eu preciso acessar minhas propriedades passando props.
+
+
         
 */ 
