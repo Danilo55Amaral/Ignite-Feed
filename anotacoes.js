@@ -191,5 +191,64 @@
             PS- dentro de Post eu preciso acessar minhas propriedades passando props.
 
 
-        
+                                    PROPRIEDADES DO POST 
+
+            Os dados dentro do Componente Post foi passado utilizando props; 
+            PS- Para não ter que ficar repetindo o props eu posso utilizar uma desestruturação 
+            buscando minhas propriedades que eu vou utilizar.
+
+                            export function Post({ author, publishedat }) 
+
+            Dentro da minha tag time eu vou trazer meu publishedat que retorna uma data porém 
+            se eu apenas trazer o publishedat vai gerar um erro pois é necessário primeiro 
+            converter para formato de string e em seguida fazer a formatação da date.
+
+            foi utilizado a função toString e o metodo new Intl para fazer a conversão da data.
+
+            Posso criar uma const e no ex foi  criada uma publisheDateFormatted e foi utilizado o 
+            new Intl.DateTimeFormat passando os parametros de como eu quero formatar.
+
+            const publishedDateFormatted = new Intl.DateTimeFormat('pt-BR', {
+                day: '2-digit',
+                month: 'long',
+                hour: '2-digit',
+                minute: '2-digit'
+            }).format(publishedAt);
+
+            Existe uma outra maneira também de se fazer essa formatação que é utilizando uma lib que é o 
+            date-fns e para instalar essa lib eu rodo o seguinte comando.  
+                npm i date-fns 
+
+            Após isso eu posso fazer importações de dentro de date-fns e vou importar aqui a função format e 
+            vou passar para minha const  publishedDateFormatted dentro da função format eu vou passar o meu 
+            publishedAt que é o que eu quero formatar e o segundo parametro é o formato, eu posso perquisar 
+            por date-fns format eu posso consultar a documentação e ter varias opções de formatações diferentes. 
+            PS- Vou colocar dentro de uma string com aspas duplas, as strings que sobram colocamos aspas simples.
+
+                const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'" ); 
+
+            O proprio date-fns tem também um pacote de idiomas que podemos importar  
+
+                    import ptBR from "date-fns/locale/pt-BR";
+                    
+            Em seguida passamos um terceiro parametro com um objeto passando o meu locale: ptBR,
+
+                const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
+                    locale: ptBR,
+                } ); 
+
+            
+            Foi criado uma nova variavel para armazenar de quanto tempo foi puiblicado da data atual
+            Para isso foi utilizado uma outra função do date-fns que é o formatDistanceToNow essa função 
+            recebe como paramtro a nossa data publishedAt e ela compara essa data com a data atual.
+            Também foi passado o locale para traduzir, vou utilizar também uma propriedade chamada 
+            addSuffix: true  para colocar o 'há' antes.
+
+            No dateTime eu utilizei uma  função nativa mesmo do JavaScript toISOString()
+
+            O conteudo do post está sendo enviado como um array por isso é necessário percorrer 
+            esse array mostrando as informações em tela, para percorrer o array utilizamos o 
+            map()
+
+            
 */ 
