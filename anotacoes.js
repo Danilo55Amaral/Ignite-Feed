@@ -250,5 +250,68 @@
             esse array mostrando as informações em tela, para percorrer o array utilizamos o 
             map()
 
+
+                                    ESTADO  (useState)
+
+            Foi criado um array de commenmts e depois dentro da minha duv foi utilizado um 
+            map que percorre esse array retornando  o componente Comment para cada comment.
+
+            Dentro do formulario é necessário aplicar algum evento para quando for clicar o botão 
+            ele adicionar o comentário, pode ser usado o onclick porém dentro do React colocamos com
+            cameocase assim fica onClick. Mas aqui utilizaremos o onSubmite para que seja no envio do 
+            formulario.
+
+            Um padrão bem interessante aqui é sempre que for criada uma função e essa função 
+            for disparada através de uma ação do usuario, iniciamos a função com handle.
+            aqui na aplicalçao criamos a função handleCreateNewComment que foi colocado 
+            dentro do evendo onSubmit.
+
+            PS- Quando eu utilizo o evento onSubmit existe um comportamento padrão no html 
+            que redireciona para outra página, porém estamos desenvolvendo uma SPA , e por 
+            isso que o console irá retornar um erro, para corrigir esse problema utilizamos 
+            dentro da nossa função o event.preventDefault() que faz com que esse padrão seja 
+            corrigido. 
+
+            O React não fica observando o valor das variaveis sempre que ela muda, para ser mostrado 
+            em tela, isso por que se o react fizesse isso não iria ser performatico o React ter que 
+            ouvir todas as variavels utilizadas pelo compomente e é por isso que no React existe 
+            o concento de estado. 
+
+            ESTADO = São variaveis que eu quero que o componente monitore.
+
+            Sempre que for necessário criar uma variavel que o valor dela for sempre mudar e que
+            o React mostre esses novos valores em tela é necessário criar um estado.
+
+            Para criar um estado eu vou dentro do componente e crio uma constante para a minha 
+            variavel e ela vai receber useState() o useState será importado de dentro do react, 
+            essa const retorna um array de duas posições e por isso eu posso utilizar desestruturação 
+            passando o nome da minha variavel que quero criar e na segunda posição utilizo o prefixo 
+            set para ela , isso indica que será a variavel modificada. na vdd essa set é uma função 
+            que avisa ao react toda vez que a variavel for modificada e com isso o React não precisa 
+            ficar monitorando a variavel.
+
+                const [comments, setComments] = useState([
+                    1,
+                    2,
+                ])
+
+            Com isso eu posso ir dentro da minha função handleCreateNew e ai inves de utilizar o 
+            push eu vou passar o meu setComments passando o novo valor. porém note que eu também 
+            repetir os valores já existente isso é necessário por causa da imutabilidade do React.
+
+                     function handleCreateNewComment() {
+                        event.preventDefault()
+                        setComments([1, 2, 3]);
+                    }
             
+            Mas dessa forma a cima ai se caso eu queira adicionar um quarto comentário não 
+            será possivel por que ele sempre irá atualizar essas 3 posições que foram passadas.
+            para resolver isso eu posso utilizar o operador spred operator ... e ele basicamente 
+            clona todos os valores atuais da variavel, e em seguida eu utilixo o comments.lenght que 
+            pega todo o tamanho do array e adiciono um + 1 
+
+                         function handleCreateNewComment() {
+                            event.preventDefault()
+                            setComments([...comments, comments.length + 1]);
+                        }
 */ 
