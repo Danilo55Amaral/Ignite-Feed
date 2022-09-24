@@ -404,6 +404,27 @@
          Com isso sempre que eu adicionar um novo comentário em seguida ele apaga a textarea.   
 
 
+                                ENTENDENDO A KEY
+
+         O react pede para que toda vez que for feito uso de uma lista como uma interação com 
+         um map , o react pede para que o primeiro elemento tenha uma propriedade chamada key 
+         essa propriedade aceita qualquer tipo de dado porém é necessário passar para ela alguma 
+         informação que seja unica de cada um dos itens da lista.
+
+                 <Post 
+                    key={post.id}
+                    author={post.author}
+                    content={post.content}
+                    publishedAt={post.publishedAt}
+                />
+
+        A key só é colocada no primeiro elemento que for aparecer do retorno de um map.
+
+        Existem 3 principais momentos em que um componente é renderizado novamente no react 
+        esses momentos são quando o estado altera , quando a propriedade altera e quando um 
+        componente pai renderiza novamente.
+
+
 
 
 */ 
