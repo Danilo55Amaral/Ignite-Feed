@@ -314,4 +314,96 @@
                             event.preventDefault()
                             setComments([...comments, comments.length + 1]);
                         }
+
+
+                        INSERINDO COMENTARIOS (Programação declarativa)
+
+        Ps- quando é adicionado em um input ou em uma texarea um name eu consigo acessar esse 
+        elemento a partir do name que foi passado para ele. 
+                         <textarea
+                                name="comment"
+                                placeholder="Deixe um comentário"
+                            />
+
+            com isso eu posso dentro da minha function pegar esse valor e armazenar em uma 
+            const e passar para mei setComment. 
+            Ps= Foi utilizado o event pois estamos capturando um evento e o target pois é quando 
+            o usuario clicar no button.
+
+            function handleCreateNewComment() {
+                event.preventDefault()
+
+                const newCommentText = event.target.comment.value 
+
+                setComments([...comments, newCommentText]);
+            }
+
+        PS - Para limpar a textarea apos ser inserido foi pego o evento e foi atribuido 
+        uma string vazia
+                            event.target.comment.value = '';
+
+        
+        
+                            Programação imperativa x Programação declarativa 
+
+        Programação imperativa = O que deve ser feito (passo-a-passo) 
+
+        Ps = dentro do react evita-se usar a programação imperativa para ser usada a programação 
+        declarativa.
+
+        Programação declarativa = Quais as condições para ter o resultado final.
+
+        PS- refatorando o código e fazendo de forma declarativa como é feito no react.
+
+        Eu não acesso mais o texto da texte area da forma que estava sendo acessada 
+        eu posso remover a minha const newCommentText = event.target.comment.value e 
+        também const newCommentText = event.target.comment.value .
+
+        Eu crio um novo estado dentro do react dentro desse state eu armazeno o texto digitado dentro 
+        do meu input, eu iniciei com uma string vazia pois é uma string que será armazenada posteriormente 
+        é importante utilizar como estado inicial do state o mesmo tipo que será armazenado posteriormente
+        por isso foi colocado uma string.
+                const [newCommentText, setNewCommentText] = useState('')
+
+        Em seguida eu vou dentro do meu textarea e vou  chamar um evento onchange para monitorar toda 
+        vez que houver uma mudanca no conteudo da textarea, e vou chamar a função  onChange={handleNewCommentChange}
+
+        PS - Em cima eu crio a  função capturando o valor do meu evento.
+             function handleNewCommentChange() {
+                    setNewCommentText(event.target.value)
+                }
+
+        Com isso eu tenho o valor digitado na textearea armazenado no estado , eu posso utilizar 
+        essa variavel do meu state que tem armazenado o valor mais recente digitado dentro da 
+        textarea para adicionar um novo comentário no final.
+
+        function handleCreateNewComment() {
+            event.preventDefault()
+            setComments([...comments, newCommentText]);
+        }
+
+        Para limpar a textearea como estamos utilizando programação declarativa vamos dentro da 
+        textarea e passar como value o estado inicial do useState que criamos.
+
+                <textarea
+                    name="comment"
+                    placeholder="Deixe um comentário"
+                    value={newCommentText}
+                    onChange={handleNewCommentChange}
+                />
+
+        Também é necessário dentro da handleCreateNewComment passar o setNewCommentText que é o estado 
+        que armazena o conteudo da textarea voltando para o estado inicial.
+
+            function handleCreateNewComment() {
+                event.preventDefault()
+                setComments([...comments, newCommentText]);
+                setNewCommentText('');
+            }
+
+         Com isso sempre que eu adicionar um novo comentário em seguida ele apaga a textarea.   
+
+
+
+
 */ 
