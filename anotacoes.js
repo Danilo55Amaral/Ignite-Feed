@@ -425,6 +425,26 @@
         componente pai renderiza novamente.
 
 
+                        COMUNICAÇÃO ENTRE COMPONENTES 
+
+            PS- handle é um termo que usamos para indicar que a função se trata de alguma ação 
+            que está sendo feita por ex handle mais o nome da ação.
+
+            PS- A unica forma de comunicar um componente com o outro é através das propriedades
+
+            PS- Umas das coisas mais legais no React é que também podemos passar funções através 
+            das propriedades, eu posso utilizar o mesmo nome da função e passar a mesma deleteComment={deleteComment}.
+
+            PS- Eu consigo enviar funções do componente pai para o componente filho para que o componente filho 
+            avise execute essa função para mudar alguma coisa no componente pai.
+
+            PS- Uma boa pratica é quando for utilizar uma função para passar como propriedade é utilizar 
+            o prefixo on seguido do resto do nome em cameocase. Quando colocamos assim estamos informando 
+            que é quando acontecer algo por isso o on.
+
+            
+
+
 
 
 */ 
