@@ -449,7 +449,24 @@
 
             Imutabilidade -> as variaveis não sofrem mutação ou seja não se altera o valor 
             de uma variavel da memoria da aplicação, ao invés disso é criado um novo valor 
-            pu seja um novo espaco na memoria
+            pu seja um novo espaco na memoria.
 
+            A imutabilidade permite com que a aplicação seja mais performatica.
+
+
+                            VALIDANDO FORMULÁRIO 
+                    
+                A propriedade required que foi usada dentro da textarea como estamos dentro do 
+                react não é necessário informar se é true ou false , essa propriedade faz com que 
+                caso tente ser publicado um comentário vazio ele sinalize.
+
+                Existe uma propriedade chamada onInvalid essa propriedade sempre é chamada quando 
+                o html identificar houve uma tentativa de submit do formulário só que o texto do 
+                campo é invalido e dentro dessa propriedade pode ser colocado uma função.
+
+
+                        REALIZANDO LIKES NOS COMENTARIOS 
+
+                
 
 */ 
