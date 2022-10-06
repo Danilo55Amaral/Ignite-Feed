@@ -467,6 +467,14 @@
 
                         REALIZANDO LIKES NOS COMENTARIOS 
 
-                
+                Como o like vai mudar de acordo com os cliques no botão de aplaudir é necessário 
+                criar um state para armazenar isso.
+
+                PS- Importante lembrar que é sempre necessário definir um state inicial com o mesmo tipo 
+                que será no valor final por ex se for number definir um number inicial, string string inicial.
+
+                Todos os eventos eles sempre precisam receber como valor uma função e nunca a execução dessa 
+                função dessa forma -> handleLikeComment() assim vai entrar em lop.
+
 
 */ 
