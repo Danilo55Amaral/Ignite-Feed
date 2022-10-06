@@ -442,9 +442,14 @@
             o prefixo on seguido do resto do nome em cameocase. Quando colocamos assim estamos informando 
             que é quando acontecer algo por isso o on.
 
-            
+                            REMOVENDO COMENTÁRIOS (IMUTABILIDADE)
 
+            A unica forma de alterar o valor da nossa lista de comentários é atraves da 
+            nossa função setComments por causa do useState.
 
+            Imutabilidade -> as variaveis não sofrem mutação ou seja não se altera o valor 
+            de uma variavel da memoria da aplicação, ao invés disso é criado um novo valor 
+            pu seja um novo espaco na memoria
 
 
 */ 
