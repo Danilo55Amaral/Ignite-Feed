@@ -477,4 +477,28 @@
                 função dessa forma -> handleLikeComment() assim vai entrar em lop.
 
 
+                        ENTENDENDO CLOSURES NO REACT 
+
+              No meu componente Comment,jsx vamos refatorar o seguinte trecho de código: 
+
+                function handleLikeComment() {
+                    setLikeCount(likeCount +1);
+                }
+
+             E algo muito importante dentro do React sempre que for atualizar alguma informação 
+             e essa informação depende do valor que ela tinha anteriormente é interessante fazer essa
+             atualização utilizando o padrão de funções: veja o código refatorado.
+
+             
+                function handleLikeComment() {
+                    setLikeCount((state) => {
+                        return state + 1
+                    });
+                }
+
+
+
+                    
+
+
 */ 
