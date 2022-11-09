@@ -14,7 +14,7 @@ const posts = [
     },
     content: [
             { type: 'paragraph', content: 'Fala galeraa 👋', },
-            { type: 'paragraph' , content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+            { type: 'paragraph' , content: 'A mente que se abre a uma nova idéia jamais volta ao seu tamanho Original. Einstein 🚀' },
             { type: 'link', content: 'jane.design/doctorcare' },          
     ],
     publishedAt: new Date('2022-08-16 17:00:00'),
@@ -28,7 +28,7 @@ const posts = [
     },
     content: [
             { type: 'paragraph', content: 'Fala galeraa 👋', },
-            { type: 'paragraph' , content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+            { type: 'paragraph' , content: 'O único lugar onde o sucesso vem antes do trabalho é no dicionário. Einstein 🚀' },
             { type: 'link', content: 'jane.design/doctorcare' },          
     ],
     publishedAt: new Date('2022-08-15 16:00:00'),
